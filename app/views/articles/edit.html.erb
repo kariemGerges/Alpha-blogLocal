@@ -1,4 +1,4 @@
-<h1>Create an article</h1>
+<h1>Edit exitisting article</h1>
 
 <% if @article.errors.any? %>
 <h3>One of the following errors is perventing the article form getting created</h3>
@@ -19,8 +19,9 @@
       <%= f.text_area :discreption %>
     </p>
       <%= f.submit %>
+
 <% end %>
 
 <p>
-  <%= link_to "Back to list", articles_path %>
+  <%= link_to "Back to articles", articles_path %>
 </p>
