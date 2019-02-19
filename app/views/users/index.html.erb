@@ -1,17 +1,22 @@
 <h1 align="center">All Alpha-bloggers</h1>
-
+<div class="apple_pagination">
+  <%= will_paginate @users %>
+</div>
 <div class="center">
   <% @users.each do |user| %>
     <ul>
-      <div class="row">
         <div class="card">
           <div class="card-header">
-            <%= link_to gravatar_for(user), user_path(user) %>
             <%= link_to user.username, user_path(user) %>
-            <small><%= pluralize(user.articles.count, "article") if user.articles %></small>
+            <div class="card-body">
+              <%= link_to gravatar_for(user), user_path(user) %>
+            <p class="card-text"><small><%= pluralize(user.articles.count, "article") if user.articles %></small></p>
+            </div>
           </div>
         </div>
-      </div>
     </ul>
   <% end %>
+  <div class="apple_pagination">
+    <%= will_paginate @users %>
+  </div>
 </div>
