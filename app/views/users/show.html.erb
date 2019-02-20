@@ -3,10 +3,10 @@
     <%= gravatar_for @user %>
     <h4><%= @user.username %>'s articles</h4>
   </div>
-<div class="center apple_pagination">
+<div class="apple_pagination">
   <%= will_paginate @user_articles %>
 </div>
 <%= render 'articles/article', obj: @user_articles %>
-<div class="center apple_pagination">
+<div class="apple_pagination">
   <%= will_paginate @user_articles %>
 </div>
