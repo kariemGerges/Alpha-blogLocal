@@ -1,0 +1,19 @@
+<h1 class= "center">Listing all Categories</h1>
+
+<div class="center">
+  <div class="apple_pagination">
+    <%= will_paginate %>
+  </div>
+    <% @categories.each do |category| %>
+      <ul class= "listing">
+        <div class="card card-body bg-light">
+          <li>
+            <%= link_to "#{category.name}", category_path(category) %>
+          </li>
+        </div>
+      </ul>
+    <% end %>
+    <div class="apple_pagination">
+      <%= will_paginate %>
+    </div>
+</div>
