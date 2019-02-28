@@ -49,7 +49,7 @@ end
   end
 
     def article_params
-    params.require(:article).permit(:title, :discreption)
+    params.require(:article).permit(:title, :discreption, category_ids:[])
   end
 
   def require_same_user
